@@ -1,0 +1,21 @@
+
+
+#Function to find if a number is considered happy or not
+
+#Subroutine
+def HappyOrNot(Value):
+    Happy = 0
+    number = Value
+    while Happy != 1:
+        Happy = 0
+        for digit in str(number):
+            square = int(digit) ** 2
+            Happy += square
+        number = Happy
+    if Happy == 1:
+        print(f"{Value} is a happy number.")
+
+# Main Program
+HappyOrNot(19)
+
+
